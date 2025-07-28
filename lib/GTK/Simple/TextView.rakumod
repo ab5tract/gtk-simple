@@ -77,3 +77,8 @@ method alignment()
     returns Justification
     is gtk-property(&gtk_text_view_get_justification, &gtk_text_view_set_justification)
     { * }
+
+method wrap-mode()
+    returns GtkTextViewWrapMode
+    is gtk-property(&gtk_text_view_get_wrap_mode, &gtk_text_view_set_wrap_mode)
+    { * }

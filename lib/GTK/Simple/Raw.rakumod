@@ -46,6 +46,13 @@ enum GtkPolicyType is export(:scrolled-window) (
                                 #This can be used e.g. to make multiple scrolled windows share a scrollbar.
 );
 
+enum GtkTextViewWrapMode is export(:text-view) (
+    GTK_WRAP_NONE       => 0,   #Do not wrap lines; just make the text area wider.
+    GTK_WRAP_CHAR       => 1,   #Wrap text, breaking lines anywhere the cursor can appear
+    GTK_WRAP_WORD       => 2,   #Wrap text, breaking lines in between words.
+    GTK_WRAP_WORD_CHAR  => 3,   #Wrap text, breaking lines in between words, or if that is not enough, also between graphemes.
+);
+
 # gtk_widget_... {{{
 
 sub gtk_widget_show(GtkWidget $widgetw)
@@ -774,6 +781,17 @@ sub gtk_text_view_get_justification(GtkWidget $widget)
 sub gtk_text_view_set_justification(GtkWidget $widget, int32 $setting)
     is native(&gtk-lib)
     is export(:text-view)
+    { * }
+
+sub gtk_text_view_get_wrap_mode(GtkWidget $widget)
+    is native(&gtk-lib)
+    is export(:text-view)
+    { * }
+
+sub gtk_text_view_set_wrap_mode(GtkWidget $widget, int32 $setting)
+    is native(&gtk-lib)
+    is export(:text-view)
+    returns int32
     { * }
 
 #

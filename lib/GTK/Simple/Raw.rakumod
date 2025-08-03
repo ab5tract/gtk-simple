@@ -1319,3 +1319,10 @@ sub gtk_image_new_from_pixbuf(GdkPixbuf $pixbuf)
     is export(:image)
     { * }
 
+## EventBox
+
+sub gtk_event_box_new()
+    returns GtkWidget
+    is native(&gtk-lib)
+    is export(:event-box)
+    { * }

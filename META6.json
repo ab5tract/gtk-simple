@@ -39,6 +39,7 @@
         "GTK::Simple::Container": "lib/GTK/Simple/Container.rakumod",
         "GTK::Simple::DrawingArea": "lib/GTK/Simple/DrawingArea.rakumod",
         "GTK::Simple::Entry": "lib/GTK/Simple/Entry.rakumod",
+        "GTK::Simple::EventBox": "lib/GTK/Simple/EventBox.rakumod",
         "GTK::Simple::FileChooserButton": "lib/GTK/Simple/FileChooserButton.rakumod",
         "GTK::Simple::Frame": "lib/GTK/Simple/Frame.rakumod",
         "GTK::Simple::GDK": "lib/GTK/Simple/GDK.rakumod",
